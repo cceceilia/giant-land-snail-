@@ -1,0 +1,703 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Special+Elite&display=swap" rel="stylesheet">
+    <title>Giant Land Snail | Conservation Brand</title>
+
+    <style>
+        :root {
+            --brown: #593126;
+            --olive: #516141;
+            --cream: #F7F5E9;
+            --darktext: #2E2019;
+            --clay: #8C6D57;
+            --sand: #E8E2D9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--cream);
+            color: var(--darktext);
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+        }
+
+
+        .nav-logo,
+        .hero h1,
+        h1,
+        h2,
+        h3,
+        .card h3,
+        .type-sample .big-letter,
+        .caption-text {
+            font-family: 'Special Elite', cursive, serif;
+            color: var(--brown);
+        }
+
+        p,
+        a,
+        span,
+        div {
+            font-family: 'Poppins', sans-serif;
+            color: var(--darktext);
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 64px;
+            border-bottom: 1px solid rgba(89, 49, 38, 0.15);
+        }
+
+        .nav-logo {
+            font-size: 24px;
+        }
+
+        .nav-links a {
+            margin-left: 28px;
+            text-decoration: none;
+            color: var(--brown);
+            font-size: 15px;
+            font-family: 'Special Elite', cursive, serif;
+        }
+
+        .nav-links a:hover {
+            border-bottom: 2px solid var(--brown);
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 86vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .logo-placeholder {
+            width: 230px;
+            height: 230px;
+            border: 1px dashed #998877;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .logo-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            padding: 40px;
+        }
+        .hero-text {
+            flex: 1;
+        }
+       .hero-img {
+        flex: 1;
+        }
+       .hero-img img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+        }
+
+        .btn-outline {
+            border: 1.5px solid var(--brown);
+            padding: 11px 28px;
+            text-decoration: none;
+            color: var(--brown);
+            display: inline-block;
+            font-family: 'Special Elite', cursive, serif;
+            letter-spacing: 1px;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--brown);
+            color: var(--cream);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        /* Two Column */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin: 90px 0;
+            align-items: center;
+        }
+
+        h2 {
+            font-size: 34px;
+            margin-bottom: 18px;
+        }
+
+        /* Card Grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 26px;
+            margin: 65px 0 90px;
+        }
+
+        .card {
+            border: 1px solid var(--brown);
+            padding: 30px;
+            background-color: var(--cream);
+            transition: 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 24px rgba(89, 49, 38, 0.15);
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+
+        /* Icon Row */
+       .icon-row {
+            display: flex;
+            gap: 36px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 45px 0 90px;
+       }
+       .icon-row img {
+           width: 400px;      
+           height: 200px;
+           object-fit: contain;
+           filter: sepia(0.3) brightness(1.05);
+           transition: transform 0.3s ease, filter 0.3s ease; 
+        }
+       .icon-row img:hover {
+           transform: scale(1.15); 
+           filter: sepia(0.3) brightness(1.2); 
+        }
+     
+        .card-border {
+            border: 1px solid #b5a58f;
+            border-radius: 12px;
+            padding: 36px 28px;
+            background-color: rgba(255, 252, 247, 0.6);
+            margin: 60px 0;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-border:hover {
+             border-color: #7a6b55;
+             box-shadow: 0 8px 24px rgba(122, 107, 85, 0.12);
+        }
+
+/* Brand Colours */
+        /* Quote Block */
+        .quote-block {
+            background-color: var(--sand);
+            padding: 60px 40px;
+            text-align: center;
+            margin: 90px 0;
+            border-left: 4px solid var(--brown);
+            border-right: 4px solid var(--brown);
+        }
+
+        .quote-block p {
+            font-size: 20px;
+            font-style: italic;
+            color: var(--brown);
+            max-width: 700px;
+            margin: 0 auto;
+            font-family: 'Special Elite', cursive, serif;
+        }
+
+        .quote-block .attribution {
+            margin-top: 16px;
+            font-size: 14px;
+            font-style: normal;
+            opacity: 0.7;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Palette */
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin: 45px 0 90px;
+        }
+
+        .swatch {
+            height: 160px;
+            border: 1px solid var(--brown);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 14px;
+            color: #fff;
+        }
+
+        .swatch .name {
+            font-weight: bold;
+            font-size: 14px;
+            font-family: 'Special Elite', cursive, serif;
+        }
+
+        .swatch .hex {
+            font-size: 12px;
+            opacity: 0.85;
+            font-family: 'Courier New', monospace;
+        }
+
+        /* Typography */
+        .type-sample {
+            border: 1px solid var(--brown);
+            padding: 30px;
+            margin: 20px 0 90px;
+            background-color: var(--sand);
+        }
+
+        .type-sample .big-letter {
+            font-size: 60px;
+            line-height: 1;
+        }
+
+        .type-sample .label {
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: 0.7;
+            margin-top: 12px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Facts Grid */
+        .facts-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 26px;
+            margin: 45px 0 90px;
+        }
+
+        .fact {
+            border-left: 3px solid var(--olive);
+            padding: 0 0 0 20px;
+        }
+
+        .fact .num {
+            font-size: 32px;
+            color: var(--olive);
+            font-weight: bold;
+            font-family: 'Special Elite', cursive, serif;
+        }
+
+        .fact p {
+            font-size: 14px;
+            margin-top: 6px;
+        }
+
+        /* Interactive Infographic Section */
+        .infographic-section {
+            background-color: var(--sand);
+            padding: 80px 0;
+            margin-top: 90px;
+        }
+
+        .infographic-section h2 {
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        .infographic-section .section-intro {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 40px;
+            opacity: 0.8;
+        }
+
+        .infographic-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .snail-card {
+            background: var(--olive);
+            border: 1px solid var(--brown);
+            border-radius: 18px;
+            padding: 30px;
+            color: var(--cream);
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .snail-card:hover {
+            transform: translateY(-6px);
+            background: var(--brown);
+        }
+
+        .snail-card .icon {
+            font-size: 34px;
+            margin-bottom: 12px;
+        }
+
+        .snail-card .card-title {
+            font-family: 'Special Elite', cursive, serif;
+            font-size: 18px;
+            color: var(--cream);
+            margin-bottom: 8px;
+        }
+
+        .tooltip {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            bottom: 110%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--brown);
+            color: var(--cream);
+            padding: 14px 18px;
+            border-radius: 12px;
+            width: 280px;
+            font-size: 14px;
+            line-height: 1.6;
+            transition: 0.25s;
+            z-index: 10;
+            text-align: left;
+            border: 1px solid var(--clay);
+        }
+
+        .snail-card:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--brown);
+            color: var(--cream);
+            padding: 45px 40px;
+            margin-top: 110px;
+            text-align: center;
+        }
+
+        footer p,
+        footer div {
+            color: var(--cream);
+        }
+
+        .caption-text {
+            font-size: 13px;
+            margin-top: 10px;
+            opacity: 0.85;
+        }
+
+        /* Responsive */
+        @media (max-width: 800px) {
+            nav {
+                padding: 20px;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .nav-links a {
+                margin: 0 10px;
+            }
+
+            .two-column,
+            .card-grid,
+            .facts-grid,
+            .palette-grid,
+            .infographic-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-logo">Giant Land Snail</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#brand">Brand</a>
+            <a href="#facts">Facts</a>
+            <a href="#infographic">Infographic</a>
+            <a href="#conservation">Conservation</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="logo-placeholder">
+            <img src="snail-2.png" alt="Giant Land Snail Logo" class="logo">
+        </div>
+        <h1>GIANT LAND SNAIL</h1>
+        <p class="subtitle">Protecting Aotearoa's ancient forest-floor inhabitant</p>
+        <a href="#about" class="btn-outline">Learn More</a>
+    </section>
+
+    <div class="container">
+
+        <!-- About -->
+        <section id="about" class="two-column">
+            <div>
+                <h2>About Powelliphanta</h2>
+                <p>Powelliphanta are ancient endemic giant land snails of New Zealand. Their logarithmic spiral shell shares visual language with Māori koru, symbolising regeneration and new life. Many subspecies are threatened by pest animals and forest-habitat loss.</p>
+                <p style="margin-top:14px;">This brand identity merges native-species biology with indigenous cultural storytelling for wildlife-conservation public outreach.</p>
+            </div>
+            <div class="hero-img">
+               <img src="Powelliphanta.jpg" alt="Powelliphanta giant land snail">
+            </div>
+        </section>
+
+        <!-- Quote Block -->
+        <section class="quote-block">
+            <p>"Koru whakapapa — the spiral of life winds through forest, shell and whānau. To protect the snail is to protect the story."</p>
+            <p class="attribution">— A note on the koru connection, in the spirit of kaitiakitanga (guardianship)</p>
+        </section>
+
+        <!-- Key Topics -->
+        <section>
+            <h2>Key Topics</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Unique Biology</h3>
+                    <p>Carnivorous snails with thousands of regenerating micro-teeth on their radula. They hunt earthworms and suck them up like spaghetti.</p>
+                </div>
+                <div class="card">
+                    <h3>Forest Habitat</h3>
+                    <p>Damp old-growth native forest floor, dependent on cool moist micro-climate. Most active after rain.</p>
+                </div>
+                <div class="card">
+                    <h3>Threats & Risk</h3>
+                    <p>Invasive predators — rats, possums, hedgehogs — and habitat fragmentation push many subspecies toward extinction.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Facts -->
+        <section id="facts">
+            <h2>Did You Know?</h2>
+            <div class="facts-grid">
+                <div class="fact">
+                    <div class="num">90mm</div>
+                    <p>Shell diameter of the largest Powelliphanta species — about the size of a man's fist.</p>
+                </div>
+                <div class="fact">
+                    <div class="num">20+ years</div>
+                    <p>They can live for more than 20 years, growing slowly in the cool New Zealand forest.</p>
+                </div>
+                <div class="fact">
+                    <div class="num">Low</div>
+                    <p>They move very little; a snail may spend its whole life within a few square metres.</p>
+                </div>
+                <div class="fact">
+                    <div class="num">100%</div>
+                    <p>Endemic — found nowhere else on Earth except Aotearoa New Zealand.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Visual Motifs -->
+        <section class="card-border">
+            <h2>Brand Visual Motifs</h2>
+            <p>Hand-drawn botanical and spiral elements used across the brand system.</p>
+            <div class="icon-row">
+                <img src="climate.png" alt="climate icon">
+                <img src="ecosystem.png" alt="ecosystem icon">
+                <img src="environment.png" alt="environment icon">
+                <img src="habitat.png" alt="habitat icon">
+                
+            </div>
+        </section>
+
+        <!-- Brand Colours -->
+        <section id="brand">
+            <h2>Brand Colours</h2>
+            <div class="palette-grid">
+                <div class="swatch" style="background:#73705E;">
+                    <div class="name">Earthy Olive</div>
+                    <div class="hex">#73705E · 45%</div>
+                </div>
+                <div class="swatch" style="background:#8C6D57;">
+                    <div class="name">Clay Brown</div>
+                    <div class="hex">#8C6D57 · 30%</div>
+                </div>
+                <div class="swatch" style="background:#4A3F35;">
+                    <div class="name">Charcoal Umber</div>
+                    <div class="hex">#4A3F35 · 5%</div>
+                </div>
+                <div class="swatch" style="background:#E8E2D9; color:#2E2019; border-color:#4A3F35;">
+                    <div class="name">Pale Sand</div>
+                    <div class="hex">#E8E2D9 · 20%</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Typography -->
+        <section>
+            <h2>Typography</h2>
+            <div class="type-sample">
+                <div class="big-letter">Aa Bb Cc</div>
+                <div class="label">Special Elite — Headlines & Display</div>
+            </div>
+            <div class="type-sample">
+                <div class="big-letter" style="font-size:36px; font-weight:normal; font-family:'Poppins', sans-serif;">The quick brown fox jumps over the lazy dog.</div>
+                <div class="label">Poppins — Body & Subheadings</div>
+            </div>
+        </section>
+
+        <!-- Conservation -->
+        <section id="conservation">
+            <h2>How We Protect</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>1. Monitor Populations</h3>
+                    <p>DOC and community rangers survey remaining wild snail groups by night search after rain.</p>
+                </div>
+                <div class="card">
+                    <h3>2. Pest Control</h3>
+                    <p>Trapping and poisoning programmes reduce rats, possums and hedgehogs in key forest zones.</p>
+                </div>
+                <div class="card">
+                    <h3>3. Guard Habitat</h3>
+                    <p>Predator-proof fencing and forest restoration preserve the damp old-growth micro-climate they need.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Interactive Infographic Section -->
+    <section id="infographic" class="infographic-section">
+        <div class="container">
+            <h2>Powelliphanta Interactive Infographic</h2>
+            <p class="section-intro">Hover each card to reveal key facts about New Zealand's ancient giant land snail.</p>
+
+            <div class="infographic-container">
+
+                <div class="snail-card">
+                    <div class="icon">🗺️</div>
+                    <div class="card-title">Endemic</div>
+                    <div class="tooltip">Powelliphanta is 100% endemic to New Zealand, found nowhere else on Earth.</div>
+                </div>
+
+                <div class="snail-card">
+                    <div class="icon">📏</div>
+                    <div class="card-title">Giant Size</div>
+                    <div class="tooltip">Maximum shell diameter reaches 90mm, about the size of an adult fist.</div>
+                </div>
+
+                <div class="snail-card">
+                    <div class="icon">⏳</div>
+                    <div class="card-title">Long Lifespan</div>
+                    <div class="tooltip">Average lifespan is 20–30 years, one of the longest-lived land snails in the world.</div>
+                </div>
+
+                <div class="snail-card">
+                    <div class="icon">🪨</div>
+                    <div class="card-title">Ancient Species</div>
+                    <div class="tooltip">Powelliphanta evolved more than 75 million years ago, before human settlement.</div>
+                </div>
+
+                <div class="snail-card">
+                    <div class="icon">🪱</div>
+                    <div class="card-title">Carnivorous Diet</div>
+                    <div class="tooltip">They are carnivorous and feed mainly on earthworms.</div>
+                </div>
+
+                <div class="snail-card">
+                    <div class="icon">🦷</div>
+                    <div class="card-title">Radula Teeth</div>
+                    <div class="tooltip">A single snail can have more than 6,000 micro-teeth on its radula.</div>
+                </div>
+
+                <div class="snail-card">
+                    <div class="icon">🌲</div>
+                    <div class="card-title">Forest Habitat</div>
+                    <div class="tooltip">They live in damp old-growth native forest and require 100% humidity.</div>
+                </div>
+
+                <div class="snail-card">
+                    <div class="icon">⚠️</div>
+                    <div class="card-title">Threatened</div>
+                    <div class="tooltip">Over 60% of Powelliphanta subspecies are classified as endangered or threatened.</div>
+                </div>
+
+                <div class="snail-card">
+                    <div class="icon">🐀</div>
+                    <div class="card-title">Invasive Predators</div>
+                    <div class="tooltip">Main predators include rats, possums and hedgehogs, all introduced to New Zealand.</div>
+                </div>
+
+                <div class="snail-card">
+                    <div class="icon">📍</div>
+                    <div class="card-title">Small Home Range</div>
+                    <div class="tooltip">One snail may spend its entire life within 3–5 square metres.</div>
+                </div>
+
+                <div class="snail-card">
+                    <div class="icon">🌀</div>
+                    <div class="card-title">Koru Connection</div>
+                    <div class="tooltip">The shell spiral connects to Māori koru symbolism of regeneration and new life.</div>
+                </div>
+
+                <div class="snail-card">
+                    <div class="icon">📉</div>
+                    <div class="card-title">Population Decline</div>
+                    <div class="tooltip">Populations have declined by an estimated 78% over the last 50 years.</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div>Giant Land Snail | Brand-Identity Project by Cecilia</div>
+        <p class="caption-text">Reference: DOC & Forest & Bird Aotearoa</p>
+    </footer>
+
+</body>
+</html>
+
